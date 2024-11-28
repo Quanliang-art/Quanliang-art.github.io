@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit" />
+	<meta name="force-rendering" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<title>首页</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport"
+		content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" type="text/css" href="./static/css/tailwind.css" />
+	<link rel="stylesheet" type="text/css" href="./static/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./static/css/responsive.css" />
+</head>
+
+<body>
+	<div class="price-wrap  gridding-green-bg">
+		<div class="container border-image border-image_green">
+			<div class="hd globla-hd">
+				<a class="back-button" href='javascript:history.back(-1)'>
+					<img src="./static/images/back_green.png" alt="">
+				</a>
+				<a class="home-button green global-link" href='/'>Home</a>
+				<div class="time-line">
+					<div class="box">
+						<a class="global-link" href='time_line_green.html'>The Timeline of Preservation</a>
+						<a class="global-link" href='time_line_red.html'>The Timeline of Destruction</a>
+					</div>
+				</div>
+			</div>
+			<div class="date global-date date_green">1965</div>
+			<div class="item" data-top="11" data-left="20">
+				<img class="img" src="./static/images/price_green_page2_1.png" alt="">
+				<div class="txt">
+					<p>Tortoises in The Fausto Llerena Tortoise Center</p>
+				</div>
+			</div>
+			<div class="item" data-top="60" data-left="5">
+				<img class="img" src="./static/images/price_green_page2_2.png" alt="">
+				<div class="txt">
+					<p>Tortoises in the pool at the center</p>
+				</div>
+			</div>
+			<div class="item" data-top="16" data-left="73">
+				<img class="img" src="./static/images/price_green_page2_3.png" alt="">
+				<div class="txt">
+					<p>Pinzon Island Tortoise (Chelonoidis ephippium) being transported from breeding center back to place of origin</p>
+				</div>
+			</div>
+			<div class="item" data-top="33" data-left="30">
+				<img class="img" src="./static/images/price_green_page2_4.png" alt="">
+				<div class="txt">
+					<p>A young giant tortoise, probably about five years old, on Santa Cruz, Galapagos.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./static/js/jquery.event.ue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./static/js/jquery.udraggable.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(window).on('load', function() {
+			$('.item').each(function(){
+				let imgWidth = $(this).find('.img')[0].naturalWidth
+				$(this).css({
+					display: 'flex',
+					width: imgWidth + 'px',
+				})
+			})
+			$('.item').udraggable({
+				containment: 'parent',
+				drag: function (e, ui) {
+					var pos = ui.position
+					console.log(pos);
+				}
+			});
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.height {
+  height: 100%;
+  overflow: hidden;
+}
+
+.gh {
+  display: block;
+  position: relative;
+  float: right;
+  height: 35px;
+  width: 35px;
+  top: 0px;
+  right: 0;
+  z-index: 100;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+.gh.selected {
+  transform: rotate(90deg);
+}
+.gh.selected a {
+  background-color: transparent;
+}
+.gh.selected a::before, .gh.selected a::after {
+  top: 0;
+}
+.gh.selected a::before {
+  transform: translateY(0px) rotate(-45deg);
+}
+.gh.selected a::after {
+  transform: translateY(0px) rotate(45deg);
+}
+.gh a {
+  display: block;
+  height: 2px;
+  margin-top: -2px;
+  position: relative;
+  top: 50%;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  width: 60%;
+  margin: 0 20%;
+  background: #fff;
+}
+.gh a::before, .gh a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  -ms-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  width: 100%;
+  background: #fff;
+}
+.gh a::before {
+  top: -8px;
+}
+.gh a::after {
+  top: 8px;
+}/*# sourceMappingURL=responsive.css.map */

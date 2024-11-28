@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+	line-height: 1.5;
+	font-family: 'Bodoni';   
+}
+
+/* 保持图片缩小后不模糊 */
+img {
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+.img {
+	font-size: 0;
+	img {
+		max-width: 100%;
+	}
+}
+
+@keyframes parabolicAnimation {
+	0%{
+		opacity: 1; 
+	}
+  100% {
+		opacity: 1;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes wiggle {
+	0% {
+		offset-rotate: auto -25deg;
+	}
+	50% {
+		offset-rotate: auto -55deg;
+	}
+	100% {
+		offset-rotate: auto -25deg;
+	}
+}
+
+@keyframes myHide {
+	0%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: 500%;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
